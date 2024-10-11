@@ -15,21 +15,21 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       {/* Navigation Bar */}
-      <nav className="my-16 animate-fade-in"> {/* Reduced margin to push the navigation up slightly */}
-        <ul className="flex items-center justify-center gap-4">
+      <nav className="my-16 animate-fade-in">
+        <ul className="flex flex-wrap items-center justify-center gap-4 max-w-full px-4"> {/* Added flex-wrap, max-w-full, and padding */}
           {navigation.map((item, index) => (
             <li
               key={item.href}
-              className="flex items-center" // Wrapper for each navigation item
+              className="flex items-center"
             >
               <Link
                 href={item.href}
-                className="text-lg font-bold duration-500 text-zinc-500 hover:text-zinc-300" // Increased font size to lg and made it bold
+                className="text-lg font-bold duration-500 text-zinc-500 hover:text-zinc-300"
               >
                 {item.name}
               </Link>
               {index < navigation.length - 1 && (
-                <span className="text-zinc-500 ml-5 mr-1">|</span> // More space on the left (ml-2) and less on the right (mr-1)
+                <span className="text-zinc-500 ml-5 mr-1">|</span> // More space on the left (ml-5) and less on the right (mr-1)
               )}
             </li>
           ))}
