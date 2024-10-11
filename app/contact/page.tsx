@@ -65,7 +65,7 @@ export default function Example() {
 					© {new Date().getFullYear()} Deebthik Ravi. All rights reserved.
 				</p>
 				<p className="text-xs text-zinc-500">
-					Built with inspiration from <a href="https://github.com/chronark/chronark.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-zinc-300">chronark</a>.
+					Built with inspiration from chronark
 				</p>
 			</div>
 		</div>
