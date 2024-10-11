@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       {/* Navigation Bar */}
-      <nav className="my-16 animate-fade-in">
+      <nav className="my-12 animate-fade-in">
         <ul className="flex flex-wrap items-center justify-center gap-4 max-w-full px-4"> {/* Added flex-wrap, max-w-full, and padding */}
           {navigation.map((item, index) => (
             <li
