@@ -3,7 +3,11 @@ import React from "react";
 import Particles from "./components/particles";
 
 const navigation = [
+  { name: "About", href: "/about" },
+  { name: "Experience", href: "/experience" },
+  { name: "Projects", href: "/projects" },
   { name: "Blog", href: "/blog" },
+  { name: "Hobbies", href: "/hobbies" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -13,14 +17,21 @@ export default function Home() {
       {/* Navigation Bar */}
       <nav className="my-16 animate-fade-in"> {/* Reduced margin to push the navigation up slightly */}
         <ul className="flex items-center justify-center gap-4">
-          {navigation.map((item) => (
-            <Link
+          {navigation.map((item, index) => (
+            <li
               key={item.href}
-              href={item.href}
-              className="text-lg font-bold duration-500 text-zinc-500 hover:text-zinc-300" // Increased font size to lg and made it bold
+              className="flex items-center" // Wrapper for each navigation item
             >
-              {item.name}
-            </Link>
+              <Link
+                href={item.href}
+                className="text-lg font-bold duration-500 text-zinc-500 hover:text-zinc-300" // Increased font size to lg and made it bold
+              >
+                {item.name}
+              </Link>
+              {index < navigation.length - 1 && (
+                <span className="text-zinc-500 ml-5 mr-1">|</span> // More space on the left (ml-2) and less on the right (mr-1)
+              )}
+            </li>
           ))}
         </ul>
       </nav>
